@@ -8,7 +8,7 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIo(server, {
     cors: {
-        origin: "https://peer-server-s7xw.onrender.com",
+        origin: ["https://peer-server-s7xw.onrender.com", "http://localhost:3000"],
         methods: ["GET", "POST"],
     }
 });
