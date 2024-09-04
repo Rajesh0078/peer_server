@@ -7,6 +7,7 @@ const app = express();
 const server = http.createServer(app);
 const peerServer = ExpressPeerServer(server, {
     debug: true,
+    alive_timeout: true,
 });
 
 app.use('/peerjs', peerServer);
